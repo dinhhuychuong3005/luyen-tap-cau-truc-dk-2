@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('nhap vao so a');
+    let b = +prompt('nhap vao so b');
+    let c = +prompt('nhap vao so c');
+    let den_ta = b ** 2 - 4 * a * c;
+    if (den_ta < 0){
+        alert('phuong trinh vo nghiem');
+    }
+    else if (den_ta == 0){
+        alert('phuong trinh co nghiem kep la: x1=x2=' + -b/(2 * a))
+    }
+    else {
+        let x1 = (-b + Math.sqrt(den_ta)) / (2 * a);
+        let x2 = (-b - Math.sqrt(den_ta)) / (2 * a);
+        alert('phuong trinh co 2 nghiem phan biet la :' + 'x1 =' + x1 + 'va x2 =' + x2 )
+    }
+</script>
+</body>
+</html>
