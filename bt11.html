@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const factor1 = 1678;
+    const factor2 = 1734;
+    const factor3 = 2014;
+    const factor4 = 2536;
+    const factor5 = 2834;
+    const factor6 = 2927;
+
+    let x = parseFloat(prompt("Nhập tổng số điện năng tiêu thụ (kWh)"));
+
+    function billLimit(eletric, limit1, limit2) {
+        if (eletric <= limit1) return 0;
+        if (eletric >= limit2) return limit2 - limit1;
+        return eletric - limit1;
+    }
+
+    const money =
+        billLimit(x, 0, 50) * factor1 +
+        billLimit(x, 50, 100) * factor2 +
+        billLimit(x, 100, 200) * factor3 +
+        billLimit(x, 200, 300) * factor4 +
+        billLimit(x, 300, 400) * factor5 +
+        billLimit(x, 400, 10000000) * factor6;
+    document.write(money);
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Tinh gia dien
+0-50 kWh = 1.678
+51-100 kWh= 1.734
+101-200 kWh = 2.014
+201-300 kWh = 2.536
+301-400 kWh = 2.834
+401 tro len = 2.927
+ -->
+</body>
+<script>
+    let a = +prompt('nhap so dien (kWh)');
+    let loai_1 = 1678;
+    let loai_2 = 1734;
+    let loai_3 = 2014;
+    let loai_4 = 2536;
+    let loai_5 = 2834;
+    let loai_6 = 2927;
+    if (a < 0){
+        alert('so dien khong hop le, so dien phai lon hon 0');
+    }
+    if (a >400){
+        alert('so tien dien la: ' + ((a - 400) * loai_6 + 100 * loai_5 + 100  * loai_4 + 100 * loai_3 + 50 * loai_2 + 50 * loai_1))
+    }
+    else if (a >300){
+        alert('so tien dien la: ' + ((a - 300) * loai_5 + 100 * loai_4 + 100 * loai_3 + 50 * loai_2 + 50 * loai_1))
+    }
+    else if (a >200){
+        alert('so tien dien la: ' + ((a - 200) * loai_4 + 100 * loai_3 + 50 * loai_2 + 50 * loai_1))
+    }
+    else if (a >100){
+        alert('so tien dien la: ' + ((a - 100) * loai_3 + 50 * loai_2 + 50 * loai_1 ))
+    }
+    else if (a >50) {
+        alert('so tien dien la: ' + ((a - 50) * loai_2  +  50 * loai_1))
+    }
+    else alert('so tien dien la: ' + a * loai_1)
+</script>
+</html>
